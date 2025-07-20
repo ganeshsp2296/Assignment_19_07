@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-flask-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jenkins-flask
+  template:
+    metadata:
+      labels:
+        app: jenkins-flask
+    spec:
+      containers:
+      - name: jenkins-flask-container
+        image: ganesh2296/jenkins-flask-app:latest
+        ports:
+        - containerPort: 80
