@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-flask-deployment
+  name: assignment-19-07
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jenkins-flask
+      app: assignment-19-07
   template:
     metadata:
       labels:
-        app: jenkins-flask
+        app: assignment-19-07
     spec:
       containers:
-      - name: jenkins-flask-container
+      - name: assignment-container
         image: ganesh2296/jenkins-flask-app:latest
         ports:
         - containerPort: 80
+
