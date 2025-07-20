@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/ganeshsp2296/Assignment_19_07.git'
+                git branch: 'main', url: 'https://github.com/ganeshsp2296/Assignment_19_07.git'
             }
         }
         stage('Build Docker Image') {
